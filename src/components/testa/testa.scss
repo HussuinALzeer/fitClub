@@ -1,0 +1,127 @@
+.Testa{
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+
+
+    .left-t{
+        display: flex;
+        flex: 1 1;
+        gap: 2rem;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+
+        &>:nth-child(1){
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        &>:nth-child(2), &>:nth-child(3){
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        &>:nth-child(4){
+            text-transform: none;
+            text-align: justify;
+            letter-spacing: 2px;
+            line-height: 40px;
+        }
+    }
+
+
+    .right-t{
+        flex: 1;
+        position: relative;
+
+        .img{
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            object-fit: cover;
+            right: 8rem;
+            top: 2rem;
+        }
+
+        &>:nth-child(1){
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            border: solid 2px orange;
+            background-color: transparent;
+            right: 9rem;
+            top: 0.9rem;
+        }
+
+        &>:nth-child(2){
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            // border: solid 2px orange;
+            background: var(--planCard);
+            right: 7rem;
+            top: 3rem;
+        }
+
+        .arrows{
+            display: flex;
+            gap: 1rem;
+            position: absolute;
+            bottom: 1rem;left: 3rem;
+
+            img{
+                width: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .Testa{
+        flex-direction: column !important;
+
+
+        .left-t{
+
+            &>:nth-child(2),&>:nth-child(3){
+                font-size: xx-large;
+            }
+        }
+
+        .right-t{
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 2rem !important;
+
+            div{
+                position: relative !important;
+                display: none !important;
+            }
+
+            img{
+                top: 0 !important;
+                right: 0 !important;
+                position: relative !important;
+                align-self: center !important;
+            }
+
+            &>:last-child{
+                display: block !important;
+                bottom: 0 !important;
+                left: 0 !important;
+
+                img{
+                    margin-right: 40px;
+                    margin-left: 40px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

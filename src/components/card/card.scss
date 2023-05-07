@@ -1,0 +1,97 @@
+.card{
+    width: 240px;
+    height: 230px;
+    background: var(--orange);
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+    border: 1.5px solid white;
+    .image{
+        width: 100% !important;
+        height: 75%;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+        }
+    }
+
+    .title{
+        display: flex;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        border-top: 1.5px solid white;
+        font-weight: 500;
+        
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .card{
+        width: 100px;
+        height: 100px;
+        background: var(--orange);
+        border-radius: 7px;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 10px;
+        border: 1.5px solid white;
+        transition: all 1s ease-in-out;
+        .image{
+            width: 100% !important;
+            height: 75%;
+            transition: 1s ease-in-out;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: 1s ease-in-out;
+                
+            }
+        }
+    
+        .title{
+            display: flex;
+            text-align: center;
+            color: white;
+            padding: 1px;
+            border-top: 1.5px solid white;
+            font-weight: 600;
+            font-size: .55rem;
+            transition: 1s ease-in-out;
+            
+        }
+    }
+
+
+    .card.visible{
+        width: 50px;
+        height: 50px;
+        transition: all 1s ease-in-out;
+
+        .image{
+            width: 100% !important;
+            height: 100%;
+            transition: 1s ease-in-out;
+
+    
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: 1s ease-in-out;
+            }
+        }
+
+        .title{
+            transition: .5s ease-in-out;
+        }
+    }
+
+}

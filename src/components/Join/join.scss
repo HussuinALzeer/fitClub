@@ -1,0 +1,97 @@
+.Join{
+    display: flex;
+    padding: 0 2rem;
+    gap: 10rem;
+    flex: 1 1;
+
+    .left-j{
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+    
+        hr{
+            position: absolute;
+            width: 20.5rem;
+            border: 2px solid var(--orange);
+            border-radius: 20%;
+            margin: -10px 0;
+        }
+    
+        div{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .right-j{
+        display: flex;
+        flex: 1 1;
+        justify-content: center;
+        align-items: flex-end;
+
+        .emailContainer{
+            display: flex;
+            gap: 3rem;
+            background-color: gray;
+            padding: 1rem 2rem;
+
+            input{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: var(--lightgray);
+
+                &::placeholder{
+                    color: var(--lightgray);
+                }
+            }
+        }
+
+        .btn-j{
+            background-color: var(--orange);
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+
+
+    .Join{
+        flex-direction: column !important;
+        gap: 1rem !important;
+        
+
+        .left-j{
+            margin-top: 100px;
+            gap: 0rem !important;
+            hr{
+                width: 14rem;
+            }
+
+            div{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+                gap: .5rem !important;
+                span{
+                    font-size: x-large;
+                }
+            }
+        }
+
+        .right-j{
+
+            padding: 4px;
+           
+            .emailContainer{
+                padding: 0rem 0rem;
+
+            }
+        }
+    }
+}
+
